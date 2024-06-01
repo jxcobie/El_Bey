@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Janna";
+  src: url("./assets/Janna\ LT\ Bold.ttf") format("ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Janna", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+code {
+  font-family: "Lato", sans-serif;
+}
+
+

@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  background-color: rgb(255, 253, 253);
+}
+
+.loader_main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.loader-container { /* New container for centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; /* Set the background color */
+  width: fit-content; /* Make the container fit the content's size */
+  padding: 20px; /* Add some padding for visual separation */
+  border-radius: 10px; /* Optional: Rounded corners */
+  animation: feedback 0.7s ease-out forwards;
+  animation-delay: 0.55s;
+}
+
+
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.25); /* Adjust the scale factor as needed */
+  transform-origin: 12.5% 12.5%; /* Adjust the origin as needed */
+}
+
+.loader {
+  width: 300px;
+  height: 300px;
+
+}
+
+.Chachia {
+  top: -75px;
+  left: -25px;
+  position: absolute;
+  transform: translateY(-300vh);
+  animation: slideIn 0.2s ease-out forwards; /* Apply the slide in animation */
+  animation-delay: 0.4s;
+  z-index: 10;
+}
+
+.Chachia__cha3rat {
+  position: absolute;
+  top: -64px;
+  left: 0;
+  z-index: 10;
+}
+
+.Chachia__chachia-back {
+  position: absolute;
+  top: 70px;
+  left: -35px;
+  z-index: 1;
+  transform: translateY(-300vh);
+
+  animation: slideInBack 0.2s ease-out forwards; /* Apply the slide in animation */
+  animation-delay: 0.4s;
+
+}
+
+.Chachia__chachia-front {
+  position: absolute;
+  top: -250px;
+  left: -90px;
+  z-index: 9;
+}
+
+.Chachia__head-shadow {
+  position: absolute;
+  top: 73px;
+  left: 26px;
+  z-index: 8;
+  animation: Shadow 0.2s ease-out forwards; /* Apply the shadow animation */
+  animation-delay: 0.45s;
+}
+
+.Head {
+  position: absolute;
+  animation: slideIn 0.55s cubic-bezier(.31,1.94,.06,1.01); /* Apply the scale up animation */
+  z-index: 7;
+}
+
+.Head__chleghem {
+  position: absolute;
+  top: 600px;
+  left: 300px;
+  z-index: 7;
+}
+
+.Head__head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+}
+
+/* Keyframes for animations */
+@keyframes slideIn {
+  0% {
+    z-index: 10;
+    transform: translateY(-300vh);
+  }
+  100% {
+    z-index: 10;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInBack {
+  0% {
+    z-index: 1;
+    transform: translateY(-300vh);
+  }
+  100% {
+    z-index: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes Shadow {
+  0% {
+    z-index: 8;
+    transform: translateY(-50px);
+    transform-origin: center center;
+  }
+  100% {
+    z-index: 8;
+    transform: translateY(0);
+    transform-origin: center center;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    z-index: 7;
+    transform: scale(0);
+    transform-origin: center center;
+  }
+  100% {
+    z-index: 7;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+}
+
+
+@keyframes feedback {
+  0%{
+    transform:  translateY(0);
+  }
+  12%{
+    transform:  translateY(60px);
+  }
+  32%{
+    transform:  translateY(65px);
+  }
+  100%{
+    transform:  translateY(0);
+  }
+}
+

@@ -1,0 +1,237 @@
+@font-face {
+  font-family: "Janna";
+  src:
+    url("../../assets/Janna\ LT\ Bold.ttf") format("ttf");  /* Keep ttf */
+  font-style: normal;
+  font-weight: bold;
+}
+
+.app-interface {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100svh;
+}
+
+.ContentBox {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 150px 25px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: 1s ease-in-out;
+}
+
+.LogoContainer {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mascot {
+    position: absolute;
+    right: 49%;
+    scale: 0.6;
+    top: 7.5%;
+}
+
+.logo-text {
+    position: absolute;
+    left: 45%;
+    top: 15%;
+}
+
+.Suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 105px;
+
+    .SuggestionCard {
+        width: 150px;
+        height: 100px;
+        background-color: #fff6f6;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+
+        h2 {
+            margin: auto;
+            font-size: 16px;
+            text-align: left;
+            font-family: "Janna", sans-serif;
+
+            font-weight: 600;
+            font-style: normal;
+            color: rgb(57, 0, 0);
+        }
+    }
+
+    .SuggestionCard:hover {
+        background-color: #fff0f0;
+    }
+
+    .SuggestionCard__title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .SuggestionCard__description {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+    }
+}
+
+.dialogue-container {
+    position: fixed;
+    bottom: -150px;
+    background-color: #ff000010;
+    border-radius: 50px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+.input-container {
+    margin: 10px;
+    width: 850px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    transition: height 0.2s ease;
+}
+.text-area {
+  width: 100%;
+  min-height: calc(1.5rem + 10px); /* Set a minimum height */
+  max-height: calc(1.5rem * 5); /* Limit the height before scrollbar appears */
+  box-sizing: border-box;
+  resize: none;
+  overflow-y: auto; /* Show scrollbar when needed */
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: transparent;
+  border: none;
+  font-family: "Janna", sans-serif;
+
+}
+
+.text-area:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+
+.text-area::-webkit-scrollbar {
+  width: 12px;
+}
+
+.text-area::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.text-area::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+.text-area::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.text-area {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+
+
+
+
+
+.message-list{
+  position: absolute;
+  width: 950px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 450px;
+
+}
+
+.disabled {
+  display: none;
+}
+
+.ai-message-bubble{
+  margin : 10px 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.ai-message{
+  color: black;
+  font-family: "Janna", sans-serif;
+  padding: 15px;
+  color: rgba(43, 0, 0, 0.99);
+  border-radius: 15px;
+  font-size: 13px;
+  background-color: #ff000010 ;
+  max-width: 400px;
+}
+
+
+.user-message-bubble{
+  margin : 10px 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.user-message{
+  color: black;
+  font-family: "Janna", sans-serif;
+  padding: 15px;
+  color: rgba(43, 0, 0, 0.99);
+  border-radius: 15px;
+  font-size: 13px;
+  background-color: #e0e0e05e ;
+  max-width: 400px;
+}
+
+
+.message-list::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f0f0f0;
+}
+
+.message-list::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
